@@ -22,17 +22,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/motorola/troika/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-## Inherit some common Lineage stuff
+## Inherit some common CrDroid stuff
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := troika
 PRODUCT_NAME := lineage_troika
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := motorola one action
+PRODUCT_MODEL := moto one action
 PRODUCT_MANUFACTURER := motorola
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+## CrDroid Props
+TARGET_BOOT_ANIMATION_RES = 1080
 
 ## Use the latest CTS approved build identifiers
 PRODUCT_BUILD_PROP_OVERRIDES += \
