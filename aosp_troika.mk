@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2020-2021 The LineageOS Project
+# Copyright (C) 2022 PixelExperience
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,12 +23,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/motorola/troika/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-## Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+## Inherit some common PixelExperience stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+
+## PixelExperience Props
+TARGET_BOOT_ANIMATION_RES := 1080
 
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := troika
-PRODUCT_NAME := lineage_troika
+PRODUCT_NAME := aosp_troika
 PRODUCT_BRAND := motorola
 PRODUCT_MODEL := motorola one action
 PRODUCT_MANUFACTURER := motorola
